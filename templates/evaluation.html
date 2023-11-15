@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Évaluation des résultats de classement</title>
+</head>
+<body>
+    <h1>Évaluation des résultats de classement</h1>
+    <ul>
+        {% for date, sizes in result.items() %}
+            <li>{{ date }}
+                <ul>
+                    {% for size, count in sizes.items() %}
+                        <li>{{ size }}: {{ count }} fichiers</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
